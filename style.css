@@ -18,41 +18,53 @@ body {
 
 .left-container {
   flex: 1;
-  background-image: url("images/festival.webp");
+  background-image: url("images/ourense.webp");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
   background-position: center;
-  position: sticky;
   display: flex;
   justify-content: right;
   align-items: flex-end;
   flex-direction: column;
+  position: relative;
+}
+
+.left-container img {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 200px;
+  height: auto;
+  z-index: 1;
 }
 
 .title-box,
 .sub-title-box {
-  background-color: white;
-  color: black;
+  display: flex;
+  display: inline-block;
+  margin-top: 33vh;
+  padding-top: 10px;
+  z-index: 2;
 }
 
 .title-box {
-  display: inline-block;
   margin-top: 20vh;
-  font-size: 4em;
+  font-size: 4.5em;
   text-align: right;
 }
 
 .sub-title-box {
-  display: inline-block;
   margin-top: 20px;
-  font-size: 2em;
+  font-size: 1.8em;
+  max-width: 40%;
 }
 
 .left-container h1,
 .left-container p {
-  text-align: center;
   margin: 0;
+  text-align: right;
+  background-color: white;
 }
 
 .right-container {
@@ -81,12 +93,13 @@ body {
 .top-box {
   background-color: rgb(223, 223, 223);
   margin-bottom: 5px;
-  font-size: 1.5em;
+  font-size: 1.3em;
   justify-content: flex-end;
 }
 
 .top-box p {
   margin-bottom: 20px;
+  padding-left: 30px;
 }
 
 .middle-box {
@@ -153,4 +166,54 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffb200;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.2rem;
+}
+
+.footer a {
+  color: #ffb200;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.header img {
+  margin: 0 20px;
+  max-height: 50px;
+}
+
+.header p {
+  margin: 10px 0;
 }
