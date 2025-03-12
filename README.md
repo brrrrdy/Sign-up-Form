@@ -21,3 +21,20 @@ Step 3: Some tips!
     The other variation is the selected input, which should have a blue border and subtle box-shadow. This can be done with the :focus pseudo-class you’ve learned about in an earlier lesson.
     Do not worry about making your project look nice on mobile. Responsive design isn’t covered until later in the curriculum.
     Validating that the password fields match each other requires JavaScript. Using JavaScript to validate forms is covered in a future lesson. For now, just validate each field separately.
+
+<!-- container body
+        left container for image and title
+            text container
+        right container for forms
+            top box
+            middle box
+                heading (legend)
+                first name
+                last name
+                email
+                phone number
+                password
+                confirm password
+            bottom box
+                create account button
+                already have an account prompt -->
