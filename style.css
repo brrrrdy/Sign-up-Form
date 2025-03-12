@@ -1,7 +1,7 @@
-* {
-  /* border: 1px solid red; */
+/* * {
+  border: 1px solid red;
   margin: 0;
-}
+} */
 
 html,
 body {
@@ -23,6 +23,36 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   background-position: center;
+  position: sticky;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.title-box,
+.sub-title-box {
+  background-color: white;
+  color: black;
+}
+
+.title-box {
+  display: inline-block;
+  margin-top: 20vh;
+  font-size: 4em;
+  text-align: right;
+}
+
+.sub-title-box {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+.left-container h1,
+.left-container p {
+  text-align: center;
+  margin: 0;
 }
 
 .right-container {
