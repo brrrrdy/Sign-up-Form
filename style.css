@@ -1,225 +1,315 @@
-/* * {
-  border: 1px solid red;
-  margin: 0;
-} */
+:root {
+  --primary: #4caf50;
+  --primary-dark: #3e8e41;
+  --secondary: #333;
+  --accent: #ffb200;
+  --light-bg: #f5f5f5;
+  --input-border: #e0e0e0;
+  --text-dark: #212121;
+  --text-light: #ffffff;
+  --error: #d32f2f;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --section-padding: 1.5rem;
+  --input-padding: 0.75rem;
+  --element-margin: 0.75rem;
+}
 
-html,
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
   font-family: "Roboto", sans-serif;
-  min-height: 100vh;
-  height: 100vh;
-}
-
-.container {
+  line-height: 1.6;
+  color: var(--text-dark);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   min-height: 100vh;
-  height: 100vh;
-  margin-top: 70px;
+  margin: 0;
 }
 
+/* Header */
 .header {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
+  background: var(--secondary);
+  padding: 10px 20px;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
   width: 100%;
-  height: 60px;
+  height: 70px;
+  z-index: 1000;
+  box-shadow: var(--shadow);
 }
 
 .header img {
-  margin: 0 20px;
-  max-height: 50px;
+  height: 40px;
+  margin: 0 15px;
+  transition: transform 0.3s ease;
 }
 
-.header p {
-  margin: 10px 0;
+.header img:hover {
+  transform: scale(1.05);
 }
 
+/* Main layout */
+.container {
+  flex: 1;
+  display: flex;
+  margin-top: 70px;
+}
+
+/* Left side - Hero */
 .left-container {
   flex: 1;
-  background-image: url("images/ourense.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("images/ourense.webp") center/cover no-repeat;
   display: flex;
-  justify-content: right;
-  align-items: flex-end;
   flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  color: var(--text-light);
   position: relative;
 }
 
-.left-container img {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  width: 200px;
+.title-box h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+
+.sub-title-box p {
+  font-size: 1.5rem;
+  max-width: 80%;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.festival-logo img {
+  position: relative;
+  width: 800px;
   height: auto;
   z-index: 1;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-.title-box,
-.sub-title-box {
-  display: flex;
-  display: inline-block;
-  margin-top: 33vh;
-  padding-top: 10px;
-  z-index: 2;
-}
-
-.title-box {
-  margin-top: 20vh;
-  font-size: 4.5em;
-  text-align: right;
-}
-
-.sub-title-box {
-  margin-top: 20px;
-  font-size: 1.8em;
-  max-width: 40%;
-}
-
-.left-container h1,
-.left-container p {
-  margin: 0;
-  text-align: right;
-  background-color: white;
-}
-
+/* Right side - Form */
 .right-container {
   flex: 1;
   display: flex;
   flex-direction: column;
-  position: relative;
-  min-height: 100vh;
-}
-
-.top-box,
-.middle-box,
-.bottom-box {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-}
-
-.top-box,
-.bottom-box {
-  background-color: rgb(223, 223, 223);
+  background: white;
 }
 
 .top-box {
-  background-color: rgb(223, 223, 223);
-  margin-bottom: 5px;
-  font-size: 1.3em;
-  justify-content: flex-end;
+  background: var(--light-bg);
+  padding-top: 100px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  font-size: 1.1rem;
 }
 
 .top-box p {
-  margin-bottom: 20px;
-  padding-left: 30px;
+  margin-bottom: 15px;
+  max-width: 600px;
 }
 
 .middle-box {
-  margin-bottom: 20px;
-  flex-direction: column;
-  align-items: left;
+  padding: 30px;
+}
+
+legend {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: var(--secondary);
 }
 
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding: 20px;
-  max-width: 60%;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 15px;
 }
 
 label {
-  font-weight: bold;
-  margin-bottom: 5px;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
 input {
-  padding: 8px;
-  font-size: 1em;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-legend {
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 20px;
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
 }
 
 .bottom-box {
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-top: 50px;
-  padding-left: 30px;
-}
-
-.bottom-box p {
-  margin-top: 20px;
+  background: var(--light-bg);
+  padding: 30px;
 }
 
 button {
-  width: 150px;
-  height: 60px;
-  font-size: 1em;
-  border-radius: 10px;
-  border: none;
-  background-color: #4caf50;
+  background: var(--primary);
   color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 6px;
   cursor: pointer;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
 }
 
 button:hover {
-  background-color: #45a049;
+  background: var(--primary-dark);
+  transform: translateY(-2px);
 }
 
+.login-prompt {
+  margin-top: 20px;
+  color: var(--text-dark);
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+.login-prompt a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+.login-prompt a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #ffb200;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--accent);
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+.footer p,
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
   font-size: 12px;
   letter-spacing: 0.2rem;
 }
 
-.footer a {
-  color: #ffb200;
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 5px;
-}
-
 .footer a:hover {
   text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-container {
+    min-height: 50vh;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sub-title-box p {
+    max-width: 100%;
+  }
+
+  .festival-logo {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 20px 0;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 60px;
+    padding: 5px 10px;
+  }
+
+  .header img {
+    height: 25px;
+    margin: 0 5px;
+  }
+
+  .container {
+    margin-top: 60px;
+    min-height: calc(100vh - 60px - 15px);
+  }
+
+  .left-container {
+    padding: 20px;
+  }
+
+  .title-box h1 {
+    font-size: 2.5rem;
+  }
+
+  .sub-title-box p {
+    font-size: 1.2rem;
+  }
+
+  .festival-logo img {
+    width: 300px;
+  }
+
+  .top-box,
+  .middle-box,
+  .bottom-box {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-box h1 {
+    font-size: 2rem;
+  }
+
+  .sub-title-box p {
+    font-size: 1rem;
+  }
+
+  .festival-logo img {
+    width: 300px;
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
 }

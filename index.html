@@ -13,99 +13,123 @@
     <title>Ourense Festival 2025 Volunteer Sign-up</title>
   </head>
   <body>
+    <header class="header">
+      <img src="images/marca-positivo.svg" alt="Xunta Logo" />
+      <img src="images/logo.png" alt="Galicia Calidade Logo" />
+      <img src="images/icons_social.png" alt="EU Social Fund Logo" />
+    </header>
+
     <main class="container">
-      <div class="header">
-        <img
-          src="images/Deputacion Ourense logo ppal.png"
-          alt="Council Logo 1"
-        />
-        <img src="images/marca-positivo.svg" alt="Xunta Logo" />
-        <img src="images/logo.png" alt="Galiza calidade" />
-        <img src="images/icons_social.png" alt="Eu social" />
-      </div>
       <section class="left-container">
+        <div class="festival-logo">
+          <img
+            src="images/magosto.svg"
+            alt="Ourense Festival Logo"
+            loading="lazy"
+          />
+        </div>
         <div class="title-box">
-          <h1><span>Ourense Festival 2025</span></h1>
+          <h1>Ourense Festival 2025</h1>
         </div>
         <div class="sub-title-box">
-          <p>
-            <span>
-              Sign up here to be part of an unforgettable experience
-              volunteering at this year's festival!</span
-            >
-          </p>
+          <p>Sign up to volunteer for an unforgettable cultural experience!</p>
         </div>
       </section>
 
       <section class="right-container">
-        <!-- Top Box -->
         <div class="top-box">
           <p>
-            This is not a real online service! You know you need something like
-            this in your life to help you realize your deepest dreams.
+            Join our team of volunteers and be part of Galicia's most exciting
+            cultural event. Gain experience, meet new people, and enjoy
+            exclusive benefits.
           </p>
-          <p>Sign up <i>now</i> to get started.</p>
-          <p>You <i>know</i> you want to.</p>
+          <p><strong>Limited spots available</strong> - apply today!</p>
         </div>
 
-        <!-- Middle Box -->
         <div class="middle-box">
-          <form action="/submit" method="POST">
-            <legend>Let's do this!</legend>
+          <form id="volunteer-form">
+            <legend>Volunteer Application</legend>
             <div class="form-grid">
               <div class="form-group">
-                <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" name="first-name" required />
-              </div>
-              <div class="form-group">
-                <label for="last-name">Last Name:</label>
-                <input type="text" id="last-name" name="last-name" required />
-              </div>
-              <div class="form-group">
-                <label for="mail">Email:</label>
-                <input type="email" id="mail" name="user-mail" required />
-              </div>
-              <div class="form-group">
-                <label for="phone-number">Phone number:</label>
+                <label for="first-name">First Name*</label>
                 <input
-                  type="tel"
-                  id="phone-number"
-                  name="phone-number"
+                  type="text"
+                  id="first-name"
+                  name="first-name"
                   required
+                  placeholder="Your first name"
                 />
               </div>
               <div class="form-group">
-                <label for="pwd">Password:</label>
-                <input type="password" id="pwd" name="password" required />
+                <label for="last-name">Last Name*</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  required
+                  placeholder="Your last name"
+                />
               </div>
               <div class="form-group">
-                <label for="conf-pwd">Confirm Password:</label>
+                <label for="email">Email*</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="your.email@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone*</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="+34 600 000 000"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password*</label>
                 <input
                   type="password"
-                  id="conf-pwd"
-                  name="conf-password"
+                  id="password"
+                  name="password"
                   required
+                  placeholder="At least 8 characters"
+                />
+              </div>
+              <div class="form-group">
+                <label for="confirm-password">Confirm Password*</label>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  required
+                  placeholder="Re-enter your password"
                 />
               </div>
             </div>
           </form>
         </div>
 
-        <!-- Bottom Box -->
         <div class="bottom-box">
-          <button type="submit">Create Account</button>
-          <p>Already have an account? <a href="#">Sign in</a></p>
+          <button type="submit" form="volunteer-form">Apply Now</button>
+          <p class="login-prompt">
+            Already applied? <a href="#">Check your status</a>
+          </p>
         </div>
       </section>
     </main>
-    <div class="footer">
+
+    <footer class="footer">
       <p>
-        Built by<a
-          href="https://github.com/brrrrdy/Sign-up-Form"
-          target="_blank"
+        Built by
+        <a href="https://github.com/brrrrdy/Sign-up-Form" target="_blank"
           >Tom Alvarez as part of the Odin Project 2025</a
         >
       </p>
-    </div>
+    </footer>
   </body>
 </html>
