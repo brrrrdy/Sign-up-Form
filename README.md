@@ -1,42 +1,26 @@
-# Sign-up-Form
+# Sign-up Form
 
-https://brrrrdy.github.io/Sign-up-Form/
+https://brrrrdy.github.io/Sign-up-Form
 
-Step 1: Set up and planning
+![Sign-up Form screenshot](https://tomalvarez.xyz/assets/scrn_signup-BjGWzG3L.webp)
 
-    Set up your git repository (refer to past projects if you need a refresher).
-    Set up your HTML and CSS files with some dummy content, just to make sure you have everything linked correctly.
-    Download a full-resolution copy of the design file, and get a general idea for how you’re going to need to lay things out in your HTML document.
+## REQUIREMENTS
 
-Step 2: Gather assets
+- Two-panel layout with a full-height background image sidebar and a sign-up form
+- Input validation using `:invalid` and `:focus` pseudo-classes
+- Password fields highlighted with a red border on invalid input
+- Focused inputs highlighted with a blue border and box-shadow
+- Custom external font for the logo section
 
-    The design has a large background-image, so go find and download an image you want to use for that section. The one in the design can be found on unsplash.com, but feel free to select your own. Be sure to credit the creator of your image!
-    Pick an external font for the ‘logo’ section. We’ve used Norse Bold, but you can use any font you like.
-    For the image-sidebar, we’ve used this Odin logo.
+## ABOUT
 
-Step 3: Some tips!
+A sign-up form for an imaginary service, built as part of The Odin Project Intermediate HTML and CSS course. The focus was on practising form structure, input styling, and CSS pseudo-classes for validation states.
 
-    How you attack this project is mostly up to you, but it is wise to begin by scaffolding out the structure of the page, and then tackle the various sections one by one.
-    The area behind the “ODIN” logo is a div that has a dark, but semi-transparent background color. This enhances the readability of the text against the busy background image.
-    The color we’ve chosen for the ‘Create Account’ button is similar to tones found in the background image. Specifically, it is #596D48.
-    The inputs, by default have a very light border (#E5E7EB), but we’ve included 2 variations. For starters, the password inputs should have a red border if they contain an invalid password. This can be handled with the :invalid pseudo-class you’ve learned in the previous lesson.
-    The other variation is the selected input, which should have a blue border and subtle box-shadow. This can be done with the :focus pseudo-class you’ve learned about in an earlier lesson.
-    Do not worry about making your project look nice on mobile. Responsive design isn’t covered until later in the curriculum.
-    Validating that the password fields match each other requires JavaScript. Using JavaScript to validate forms is covered in a future lesson. For now, just validate each field separately.
+The design uses a full-height image sidebar with a semi-transparent overlay to maintain text readability against a busy background, paired with a clean form panel on the right.
 
-<!-- container body
-        left container for image and title
-            text container
-        right container for forms
-            top box
-            middle box
-                heading (legend)
-                first name
-                last name
-                email
-                phone number
-                password
-                confirm password
-            bottom box
-                create account button
-                already have an account prompt -->
+Input states are handled entirely in CSS — a red border flags invalid password fields, while a blue border and subtle box-shadow highlight the currently focused input, giving the form clear, accessible visual feedback without any JavaScript.
+
+## BUILT WITH
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
